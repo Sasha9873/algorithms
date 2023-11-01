@@ -76,10 +76,10 @@ void shift_down(struct heap* hp, size_t i)
 
 	size_t min_i = i;
 
-	if(right_i < hp->size && hp->data[left_i].frequency < hp->data[min_i].frequency)
+	if(left_i < hp->size && hp->data[left_i].frequency < hp->data[min_i].frequency)
 		min_i = left_i;
 
-	if(left_i < hp->size && hp->data[right_i].frequency < hp->data[min_i].frequency)
+	if(right_i < hp->size && hp->data[right_i].frequency < hp->data[min_i].frequency)
 		min_i = right_i;
 
 	if(min_i != i)
